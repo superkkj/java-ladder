@@ -26,7 +26,7 @@ public class ComputerStore {
 
     public static String getVersionOptional(OptionalComputer computer) {
 
-        return   Optional.ofNullable(computer)
+        return Optional.ofNullable(computer)
                 .flatMap(OptionalComputer::getSoundcard)
                 .flatMap(OptionalSoundcard::getUsb)
                 .flatMap(OptionalUSB::getVersion)
